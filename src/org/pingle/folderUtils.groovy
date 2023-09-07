@@ -9,17 +9,16 @@ class folderUtils implements Serializable {
         this.steps = steps
     }
     def createFolder(String folderPath) {
-
         // Create a File object representing the folder
         def folder = new File(folderPath)
         // Check if the folder already exists
         if (!folder.exists()) {
-            // // If it doesn't exist, create the folder
-            // if (folder.mkdirs()) {
-                 steps.echo('Folder created successfully.')
-            // } else {
-            //     error "Failed to create the folder."
-            // }
+            // If it doesn't exist, create the folder
+            if (folder.mkdirs()) {
+              steps.echo('Folder created successfully.')
+            } else {
+                stps.error "Failed to create the folder."
+            }
         } else {
             steps.echo('Folder already exists.')
         }
