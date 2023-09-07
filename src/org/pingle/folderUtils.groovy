@@ -12,12 +12,12 @@ class folderUtils {
         if (!folder.exists()) {
             // // If it doesn't exist, create the folder
             // if (folder.mkdirs()) {
-                 echo("Folder created successfully.")
+                 echo('Folder created successfully.')
             // } else {
             //     error "Failed to create the folder."
             // }
         } else {
-            echo("Folder already exists.")
+            echo('Folder already exists.')
         }
     }
 
