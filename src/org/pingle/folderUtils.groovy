@@ -17,7 +17,7 @@ class folderUtils implements Serializable {
             if (folder.mkdirs()) {
               steps.echo('Folder created successfully.')
             } else {
-                stps.error "Failed to create the folder."
+                steps.error "Failed to create the folder."
             }
         } else {
             steps.echo('Folder already exists.')
