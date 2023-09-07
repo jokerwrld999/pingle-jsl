@@ -8,7 +8,7 @@ class folderUtils implements Serializable {
     folderUtils(steps) {
         this.steps = steps
     }
-    static def createFolder(String path) {
+    def createFolder(String path) {
         def folderPath = 'C:\\Jenkins'
 
         // Create a File object representing the folder
@@ -26,11 +26,11 @@ class folderUtils implements Serializable {
         }
     }
 
-    static def removeFolder(String path) {
+    def removeFolder(String path) {
         // Logic to remove a folder
     }
 
-    static def cleanFolder(String path) {
+    def cleanFolder(String path) {
         // Logic to clean up a folder
     }
 }
