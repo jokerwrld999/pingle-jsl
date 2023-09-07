@@ -9,7 +9,6 @@ class folderUtils implements Serializable {
     }
 
     def createFolder(String folderPath) {
-        // Check if the folder already exists
         if (!steps.fileExists(folderPath)) {
             steps.bat("mkdir ${folderPath}")
             steps.echo "Folder created successfully.";
@@ -27,7 +26,7 @@ class folderUtils implements Serializable {
         }
     }
 
-    def cleanFolder(String path) {
+    def cleanFolder(String folderPath) {
         if (steps.fileExists(folderPath)) {
             steps.bat("del /s /q ${folderPath}/*.*")
             steps.echo "Folder cleaned successfully."
