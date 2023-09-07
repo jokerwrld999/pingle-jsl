@@ -10,11 +10,11 @@ class folderUtils implements Serializable {
 
     def createFolder(String folderPath) {
         // Create a File object representing the folder
-        File f = new File(folderPath);
+        File f = new File("${folderPath}").getParent();
 
         // Check if the folder already exists
-        if (!f.getParent().exists()) {
-            if (f.getParent().mkdirs()) {
+        if (!f.exists()) {
+            if (f.mkdirs()) {
                 steps.echo "Folder created successfully.";
             } else {
                 steps.error "Failed to create the folder.";
