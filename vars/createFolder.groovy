@@ -2,6 +2,6 @@
 
 import org.pingle.folderUtils
 
-def call() {
-    return new folderUtils(this).createFolder()
+def call(String folderPath) {
+    return new folderUtils(this).createFolder(folderPath)
 }
