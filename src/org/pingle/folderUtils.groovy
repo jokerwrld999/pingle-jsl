@@ -8,7 +8,7 @@ class folderUtils implements Serializable {
     folderUtils(steps) {
         this.steps = steps
     }
-    def createFolder(String path) {
+    def createFolder() {
         def folderPath = 'C:\\Jenkins'
 
         // Create a File object representing the folder
