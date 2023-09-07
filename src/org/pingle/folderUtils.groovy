@@ -19,7 +19,7 @@ class folderUtils implements Serializable {
               steps.echo('Folder created successfully.')
             //} else {
                 steps.error "Failed to create the folder."
-            /}
+            //}
         } else {
             steps.echo('Folder already exists.')
         }
