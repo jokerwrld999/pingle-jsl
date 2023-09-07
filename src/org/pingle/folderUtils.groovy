@@ -11,7 +11,8 @@ class folderUtils implements Serializable {
     def createFolder(String folderPath) {
         // Create a File object representing the folder
         File f = new File("C:/Jenkins/Saved/UnrealBuildTool/");
-        echo "Current workspace is ${steps.WORKSPACE}"
+        String currentDir = new File(".").getAbsolutePath()
+        steps.echo(currentDir)
         // Check if the folder already exists
         if (!f.exists()) {
             //steps.bat("mkdir ${folderPath}")
