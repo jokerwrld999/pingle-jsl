@@ -8,17 +8,18 @@ class folderUtils {
 
         // Create a File object representing the folder
         def folder = new File(folderPath)
+        def folderExists = fileExists(file: folderPath)
 
         // Check if the folder already exists
         if (!folder.exists()) {
             // // If it doesn't exist, create the folder
             // if (folder.mkdirs()) {
-                 echo "Folder created successfully."
+                 echo("Folder created successfully.")
             // } else {
             //     error "Failed to create the folder."
             // }
         } else {
-            echo "Folder already exists."
+            echo("Folder already exists.")
         }
     }
 
