@@ -2,10 +2,10 @@ package org.pingle
 
 import java.io.File
 
-class folderUtils  implements Serializable {
+class folderUtils implements Serializable {
     def steps
 
-    Docker(steps) {
+    folderUtils(steps) {
         this.steps = steps
     }
     static def createFolder(String path) {
