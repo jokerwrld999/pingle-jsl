@@ -8,8 +8,6 @@ class folderUtils {
 
         // Create a File object representing the folder
         def folder = new File(folderPath)
-        def folderExists = fileExists(file: folderPath)
-
         // Check if the folder already exists
         if (!folder.exists()) {
             // // If it doesn't exist, create the folder
