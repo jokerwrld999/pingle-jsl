@@ -4,7 +4,7 @@ import java.io.File
 
 class folderUtils {
     static def createFolder(String path) {
-        def folderPath = "C:\Jenkins"
+        def folderPath = 'C:\Jenkins'
 
         // Create a File object representing the folder
         def folder = new File(folderPath)
