@@ -13,7 +13,7 @@ class folderUtils implements Serializable {
         File f = new File(folderPath);
 
         // Check if the folder already exists
-        if (!f.getParent()exists()) {
+        if (!f.getParent().exists()) {
             if (f.getParent().mkdirs()) {
                 steps.echo "Folder created successfully.";
             } else {
