@@ -28,7 +28,7 @@ class folderUtils implements Serializable {
 
     def cleanFolder(String folderPath) {
         if (steps.fileExists(folderPath)) {
-            steps.bat("del /s /q \"${folderPath}/*\"")
+            steps.bat("Remove-Item -Path \"${folderPath}/*\" -Force -Recurse")
             steps.echo "Folder cleaned successfully."
         } else {
             steps.echo('Folder does not exist.')
