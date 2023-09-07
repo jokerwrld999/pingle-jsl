@@ -18,8 +18,13 @@ class folderUtils implements Serializable {
         }
     }
 
-    def removeFolder(String path) {
-        // Logic to remove a folder
+    def removeFolder(String folderPath) {
+        if (steps.fileExists(folderPath)) {
+            steps.bat("rmdir /s /q ${folderPath}")
+            steps.echo "Folder removed successfully.";
+        } else {
+            steps.echo('Folder already removed.');
+        }
     }
 
     def cleanFolder(String path) {

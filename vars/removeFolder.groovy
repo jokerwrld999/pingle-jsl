@@ -3,5 +3,5 @@
 import org.pingle.folderUtils
 
 def call(String folderPath) {
-    folderUtils.removeFolder(folderPath)
+    return new folderUtils(this).removeFolder(folderPath)
 }
