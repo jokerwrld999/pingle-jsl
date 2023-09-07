@@ -18,7 +18,7 @@ class folderUtils implements Serializable {
               steps.bat "mkdir ${folderPath}"
               steps.echo('Folder created successfully.')
             //} else {
-                steps.error "Failed to create the folder."
+                //steps.error "Failed to create the folder."
             //}
         } else {
             steps.echo('Folder already exists.')
