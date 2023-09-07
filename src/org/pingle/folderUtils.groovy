@@ -14,7 +14,7 @@ class folderUtils implements Serializable {
 
         // Check if the folder already exists
         if (!f.exists()) {
-            if (steps.bat("mkdir ${env.folderPath}")) {
+            if (steps.bat("mkdir ${folderPath}")) {
                 steps.echo "Folder created successfully.";
             } else {
                 steps.error "Failed to create the folder.";
