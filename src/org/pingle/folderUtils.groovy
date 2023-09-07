@@ -34,4 +34,13 @@ class folderUtils implements Serializable {
             steps.echo('Folder does not exist.')
         }
     }
+    
+    def archiveFolder(Map config = [:]) {
+        if (steps.fileExists(${config.srcPath})) {
+            steps.bat("powershell.exe -Command \"Compress-Archive -Path '${config.srcPath}' -DestinationPath '${config.destPath}' -Force\"")
+            steps.echo "Folder archived successfully."
+        } else {
+            steps.echo('Folder does not exist.')
+        }
+    }
 }
