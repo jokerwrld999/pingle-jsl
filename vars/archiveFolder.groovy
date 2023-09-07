@@ -2,6 +2,6 @@
 
 import org.pingle.folderUtils
 
-def call(Map config = [:]) {
-    return new folderUtils(this).archiveFolder("${config.srcPath}","${config.destPath}")
+def call(String srcPath, String destPath) {
+    return new folderUtils(this).archiveFolder(srcPath, destPath)
 }
