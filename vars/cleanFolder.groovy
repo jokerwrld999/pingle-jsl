@@ -3,5 +3,5 @@
 import org.pingle.folderUtils
 
 def call(String folderPath) {
-    folderUtils.cleanFolder(folderPath)
+    return new folderUtils(this).cleanFolder(folderPath)
 }

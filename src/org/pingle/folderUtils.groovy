@@ -28,6 +28,11 @@ class folderUtils implements Serializable {
     }
 
     def cleanFolder(String path) {
-        // Logic to clean up a folder
+        if (steps.fileExists(folderPath)) {
+            steps.bat("del /s /q ${folderPath}/*.*")
+            steps.echo "Folder cleaned successfully."
+        } else {
+            steps.echo('Folder does not exist.')
+        }
     }
 }
