@@ -2,7 +2,12 @@ package org.pingle
 
 import java.io.File
 
-class folderUtils {
+class folderUtils  implements Serializable {
+    def steps
+
+    Docker(steps) {
+        this.steps = steps
+    }
     static def createFolder(String path) {
         def folderPath = 'C:\\Jenkins'
 
@@ -12,7 +17,7 @@ class folderUtils {
         if (!folder.exists()) {
             // // If it doesn't exist, create the folder
             // if (folder.mkdirs()) {
-                 echo('Folder created successfully.')
+                 steps.echo('Folder created successfully.')
             // } else {
             //     error "Failed to create the folder."
             // }
